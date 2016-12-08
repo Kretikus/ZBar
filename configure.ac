@@ -4,7 +4,7 @@ AC_INIT([zbar], [0.10], [spadix@users.sourceforge.net])
 AC_CONFIG_AUX_DIR(config)
 AC_CONFIG_MACRO_DIR(config)
 AM_INIT_AUTOMAKE([1.10 -Wall -Werror foreign subdir-objects std-options dist-bzip2])
-AM_PROG_AR=/usr/bin/ar
+AM_PROG_AR=/bin/ar
 AC_CONFIG_HEADERS([include/config.h])
 AC_CONFIG_SRCDIR(zbar/scanner.c)
 LT_PREREQ([2.2])
