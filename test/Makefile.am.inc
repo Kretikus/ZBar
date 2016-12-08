@@ -61,7 +61,7 @@ test_test_qt_LDADD = $(QT_LIBS) qt/libzbarqt.la $(AM_LDADD)
 BUILT_SOURCES += $(nodist_test_test_qt_SOURCES)
 DISTCLEANFILES += $(nodist_test_test_qt_SOURCES)
 
-test/moc_%.h: test/%.cpp
+test/moc_.h: test/.cpp
 	$(MOC) -i $(test_test_qt_CPPFLAGS) $< -o $@
 endif
 

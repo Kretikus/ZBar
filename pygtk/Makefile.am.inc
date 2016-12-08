@@ -17,7 +17,7 @@ pygtk/zbarpygtk.defs: include/zbar/zbargtk.h
 	$(PYTHON) $(PYGTK_H2DEF) $< | \
 	$(SED) -e 's/Z_TYPE_BAR_/ZBAR_TYPE_/' > $@
 
-pygtk/%.c: pygtk/%.defs $(srcdir)/pygtk/zbarpygtk.override
+pygtk/.c: pygtk/.defs $(srcdir)/pygtk/zbarpygtk.override
 	$(PYGTK_CODEGEN) --prefix zbarpygtk \
             --register $(PYGTK_DEFS)/gdk-types.defs \
 	    --override $(srcdir)/pygtk/zbarpygtk.override $< > $@

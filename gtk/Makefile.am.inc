@@ -10,10 +10,10 @@ BUILT_SOURCES += gtk/zbarmarshal.c gtk/zbarmarshal.h
 CLEANFILES += gtk/zbarmarshal.c gtk/zbarmarshal.h
 EXTRA_DIST += gtk/zbarmarshal.list
 
-%.h: %.list
+.h: .list
 	$(GLIB_GENMARSHAL) --g-fatal-warnings --prefix=zbar_marshal \
 	    --header $^ > $@
 
-%.c: %.list
+.c: .list
 	$(GLIB_GENMARSHAL) --g-fatal-warnings --prefix=zbar_marshal \
 	    --body $^ > $@

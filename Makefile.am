@@ -66,10 +66,10 @@ dist_doc_DATA += README.windows
 pkgdata_DATA = $(srcdir)/examples/barcode.png \
     $(srcdir)/examples/scan_image.cpp $(srcdir)/examples/scan_image.vcproj
 
-%-rc.o: %.rc
+-rc.o: .rc
 	$(RC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
 	$(AM_CPPFLAGS) $(CPPFLAGS) -o $@ $<
-%-rc.lo: %.rc
+-rc.lo: .rc
 	$(LIBTOOL) --tag=RC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
 	--mode=compile $(RC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
 	$(AM_CPPFLAGS) $(CPPFLAGS) -o $@ $<
